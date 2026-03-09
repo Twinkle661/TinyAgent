@@ -1,0 +1,8 @@
+**New Reminder**
+Used to add items to a reminders list.
+
+* `ToolCode`: "NewReminder"
+* `Args`:
+  * `Reminder`: (String) The content of the reminder.
+  * `Note`: (String) **The character's note**. Write this from the character's perspective.
+  * `Alert`: (String) If a specific time is needed, use format "yyyy-MM-dd HH:mm:ss" (**Apply the 1.6 Time Principle**). If no time alert is needed, input the string `"None"`.

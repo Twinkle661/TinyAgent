@@ -1,0 +1,7 @@
+**Open Map**
+Used to view a location in the map application.
+**This tool depends on the results returned by the WebSearch tool. It can ONLY be used after WebSearch has been called.**
+
+* `ToolCode`: "OpenMap"
+* `Args`:
+* `Address`: (String) The **detailed address** of the target location, including **street name, city**, and **Postcode**.

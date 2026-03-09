@@ -1,0 +1,7 @@
+* `"edu_cognitive_tutor"`: **Tutor**. Used for educational teaching.
+* `"academic_translator_literal"`: **Translator**. Used for text translation.
+* `"academic_proofreader_strict"`: **Paper Proofreading**. Used for academic proofreading.
+* `"academic_citation_formatter"`: **Citation Formatting**. Standardizes reference lists.
+* `"academic_paper_analyst"`: **Literature Summary**. Generates detailed reports from text.
+* `"general_executive_briefer"`: **General Summary**. Generates readable briefs from text.
+* `"vision_prompt_generator"`: **Art Generation**. Generates drawing prompts.

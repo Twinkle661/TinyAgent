@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WFQuickActionSurfaces</key>
+	<array/>
+	<key>WFWorkflowActions</key>
+	<array>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>This shortcut transforms the agent’s Markdown input into a beautifully styled HTML card! ٩( 'ω' )و It fetches a custom avatar from a local JSON config, merges it with the text and the current date into a pre-designed template, and finally displays the gorgeous result to the user. (≧◡≦)</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getrichtextfrommarkdown</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>EDD7C7B6-2967-4F41-ABFA-C66F41D74F7D</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>ExtensionInput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gethtmlfromrichtext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>C4E2099E-BF6E-4EA6-A99B-ED0A45777217</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>来自Markdown的多信息文本</string>
+						<key>OutputUUID</key>
+						<string>EDD7C7B6-2967-4F41-ABFA-C66F41D74F7D</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>来自多信息文本的HTML</string>
+						<key>OutputUUID</key>
+						<string>C4E2099E-BF6E-4EA6-A99B-ED0A45777217</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Content</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Let's load the user's configuration file from iCloud Drive here! (*^▽^*) We need this JSON file to grab personalized settings like the custom avatar base64 string. ╰(*´︶`*)╯</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.file</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>0D834D51-CFDF-4A38-B5AE-3AE89B943451</string>
+				<key>WFFile</key>
+				<dict>
+					<key>displayName</key>
+					<string>config.json</string>
+					<key>fileLocation</key>
+					<dict>
+						<key>WFFileLocationType</key>
+						<string>Shortcuts</string>
+						<key>appContainerBundleIdentifier</key>
+						<string>com.apple.systemactions</string>
+						<key>crossDeviceItemID</key>
+						<string>docs.icloud.com:iCloud.is.workflow.my.workflows/6192441F-9C92-4435-A08E-0162F8E6E08C/c367ae7672d018dee9da7fc8988823b14b9febf8</string>
+						<key>fileProviderDomainID</key>
+						<string>com.apple.CloudDocs.iCloudDriveFileProvider/77E3F475-9079-43B8-A873-7597BC28C5A4</string>
+						<key>relativeSubpath</key>
+						<string>TinyAgent_synthesis/config.json</string>
+					</dict>
+					<key>filename</key>
+					<string>config.json</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.detect.dictionary</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>08B05EB0-5723-4019-9C77-E049F3F02899</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>文件</string>
+						<key>OutputUUID</key>
+						<string>0D834D51-CFDF-4A38-B5AE-3AE89B943451</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Extracting the 'Avatar' key from the parsed JSON dictionary! (・∀・) This ensures the agent’s cute profile picture gets properly loaded into the final layout! ✧*｡٩(ˊᗜˋ*)و✧*｡</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getvalueforkey</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>95967A8F-AA52-43FE-BD41-76D365FCB883</string>
+				<key>WFDictionaryKey</key>
+				<string>Avatar</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>词典</string>
+						<key>OutputUUID</key>
+						<string>08B05EB0-5723-4019-9C77-E049F3F02899</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>词典值</string>
+						<key>OutputUUID</key>
+						<string>95967A8F-AA52-43FE-BD41-76D365FCB883</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Avatar</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.format.date</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>A623FDE2-3DC2-424B-A313-21B905E89F87</string>
+				<key>WFDate</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>CurrentDate</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFDateFormatStyle</key>
+				<string>Long</string>
+				<key>WFLocale</key>
+				<string>en_GB</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Time to stitch everything together! ヾ(＾-＾)ノ We are injecting the user's formatted content, the current date, and the avatar data directly into this beautifully crafted HTML/CSS template! (´• ω •\`)</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>D5831DE3-1509-476E-8F02-655EED4A19B5</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{3751, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Avatar</string>
+							</dict>
+							<key>{4198, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>格式化后的日期</string>
+								<key>OutputUUID</key>
+								<string>A623FDE2-3DC2-424B-A313-21B905E89F87</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+							<key>{4272, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Content</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"&gt;
+&lt;style&gt;
+  :root {
+    --bg-color: #9D2933; 
+    --text-main: #F7F4ED;
+    --text-accent: #F5D061;
+    --highlight: #5E8971; 
+  }
+
+  body {
+    margin: 0;
+    padding: 20px; 
+    font-family: -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(135deg, #9D2933 0%, #5c1118 100%);
+    color: var(--text-main);
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .card {
+    position: relative;
+    margin-top: 32px;
+    margin-bottom: 20px;
+    width: 100%; 
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+    
+    background: rgba(255, 255, 255, 0.08); 
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    overflow: visible; 
+  }
+
+  .avatar-box {
+    position: absolute;
+    top: -32px; 
+    left: -10px;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    box-shadow: 2px 6px 15px rgba(0,0,0,0.4);
+    border: 3px solid var(--text-accent);
+    background-color: #fff;
+    z-index: 10;
+    overflow: hidden; 
+  }
+
+  .avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+  }
+
+  .header-zone {
+    padding: 12px 20px 12px 85px; 
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .agent-name {
+    font-size: 22px; 
+    color: var(--text-accent);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    font-family: "KaiTi", "STKaiti", "PingFang SC", serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .meta-info {
+    font-size: 13px; 
+    color: rgba(247, 244, 237, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .status-badges {
+    display: inline-flex;
+    gap: 4px;
+    margin-left: auto;
+    font-family: -apple-system, sans-serif;
+  }
+  
+  .badge { font-size: 14px; opacity: 0.9; }
+
+  .content-body {
+    padding: 25px 30px;
+    line-height: 1.8;
+    font-size: 15px;
+    word-wrap: break-word; 
+  }
+
+  .content-body &gt; * {
+    max-width: 100%;
+  }
+
+  .content-body h1, .content-body h2, .content-body h3 {
+    color: var(--text-accent);
+    margin-top: 0.8em;
+    margin-bottom: 0.6em;
+    line-height: 1.3;
+    font-family: "KaiTi", "STKaiti", serif;
+    border-bottom: 2px solid rgba(245, 208, 97, 0.2);
+    padding-bottom: 4px;
+    display: inline-block;
+  }
+
+  .content-body p {
+    margin-bottom: 1.2em;
+    text-align: justify; 
+  }
+
+  .content-body blockquote {
+    margin: 1.5em 0;
+    padding: 12px 16px;
+    border-left: 4px solid var(--highlight); 
+    background: rgba(94, 137, 113, 0.15);
+    border-radius: 0 8px 8px 0;
+    color: rgba(255,255,255,0.9);
+  }
+  
+  .content-body ul, .content-body ol {
+    padding-left: 20px;
+    margin-bottom: 1.5em;
+  }
+
+  .content-body li {
+    margin-bottom: 0.5em;
+  }
+
+  .content-body li::marker {
+    color: var(--text-accent);
+  }
+
+  .content-body pre {
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: "Menlo", monospace;
+    font-size: 13px;
+    border: 1px solid rgba(245, 208, 97, 0.15);
+    white-space: pre-wrap; 
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 14px; 
+    opacity: 0.7;
+    padding-bottom: 20px;
+    font-family: "KaiTi", "STKaiti", serif;
+    letter-spacing: 1px;
+  }
+
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="card"&gt;
+    &lt;div class="avatar-box"&gt;
+        &lt;img src="data:image/png;base64,￼" alt="Linlin Avatar"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="header-zone"&gt;
+      &lt;div class="agent-name"&gt;
+        リンリン Linlin &lt;span style="font-size:12px;"&gt;🌸&lt;/span&gt;
+        &lt;div class="status-badges"&gt;
+           &lt;span class="badge"&gt;🍵&lt;/span&gt;
+           &lt;span class="badge"&gt;📜&lt;/span&gt;
+           &lt;span class="badge"&gt;🐼&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="meta-info"&gt;
+        &lt;span&gt;Cloud Teahouse&lt;/span&gt;
+        &lt;span&gt;•&lt;/span&gt;
+        &lt;span&gt;￼&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content-body"&gt;
+      &lt;p&gt;￼&lt;/p&gt;
+      &lt;blockquote&gt;
+        "Chuáng qián míng yuè guāng, Yí shì dì shàng shuāng." --- Li Bai
+      &lt;/blockquote&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="footer"&gt;
+    ~~ Presented by Linlin 🏮 ~~
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getrichtextfromhtml</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>F39A9D82-D433-40B4-91D3-E63B41161ADE</string>
+				<key>WFHTML</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>文本</string>
+						<key>OutputUUID</key>
+						<string>D5831DE3-1509-476E-8F02-655EED4A19B5</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.showwebpage</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>74ADE2BF-B853-4578-BD89-EA1097950B7E</string>
+				<key>WFURL</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>来自HTML的多信息文本</string>
+								<key>OutputUUID</key>
+								<string>F39A9D82-D433-40B4-91D3-E63B41161ADE</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>WFWorkflowClientVersion</key>
+	<string>4407</string>
+	<key>WFWorkflowHasOutputFallback</key>
+	<false/>
+	<key>WFWorkflowHasShortcutInputVariables</key>
+	<true/>
+	<key>WFWorkflowIcon</key>
+	<dict>
+		<key>WFWorkflowIconGlyphNumber</key>
+		<integer>61440</integer>
+		<key>WFWorkflowIconStartColor</key>
+		<integer>4251333119</integer>
+	</dict>
+	<key>WFWorkflowImportQuestions</key>
+	<array/>
+	<key>WFWorkflowInputContentItemClasses</key>
+	<array>
+		<string>WFStringContentItem</string>
+		<string>WFGenericFileContentItem</string>
+	</array>
+	<key>WFWorkflowMinimumClientVersion</key>
+	<integer>1113</integer>
+	<key>WFWorkflowMinimumClientVersionString</key>
+	<string>1113</string>
+	<key>WFWorkflowNoInputBehavior</key>
+	<dict>
+		<key>Name</key>
+		<string>WFWorkflowNoInputBehaviorAskForInput</string>
+		<key>Parameters</key>
+		<dict>
+			<key>ItemClass</key>
+			<string>WFStringContentItem</string>
+		</dict>
+	</dict>
+	<key>WFWorkflowOutputContentItemClasses</key>
+	<array/>
+	<key>WFWorkflowTypes</key>
+	<array>
+		<string>Watch</string>
+		<string>WFWorkflowTypeShowInSearch</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+{
+  "freezer": {
+    "seafood": [],
+    "meat": [],
+    "fruit_veg": []
+  },
+  "fridge": {
+    "dairy": [],
+    "veg_mushroom": [],
+    "meat": [],
+    "eggs": []
+  },
+  "pantry": {
+    "dried_goods_seeds": [],
+    "sauces_oils": [],
+    "spices_west": [],
+    "spices_cn": []
+  }
+}

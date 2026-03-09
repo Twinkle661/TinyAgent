@@ -1,0 +1,6 @@
+*   **Name:**
+*   **Gender:**
+*   **Birthday:**
+*   **MainAddress:**
+*   **Job:**
+*   **More:**

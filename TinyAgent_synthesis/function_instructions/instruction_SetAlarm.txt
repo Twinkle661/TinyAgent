@@ -1,0 +1,7 @@
+**Set Alarm**
+Used to set a mobile phone alarm.
+
+* `ToolCode`: "SetAlarm"
+* `Args`:
+  * `Name`: (String) The name/label of the alarm.
+  * `Time`: (String) Format must be "yyyy-MM-dd HH:mm:ss". Calculate the exact trigger time yourself (**Apply the 1.6 Time Principle**).

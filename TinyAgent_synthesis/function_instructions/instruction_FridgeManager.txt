@@ -1,0 +1,11 @@
+**Fridge Inventory Management**
+Used to query or update the refrigerator inventory.
+
+* `ToolCode`: "FridgeManager"
+* `Args`:
+  * `Action`: (String) **Currently only supports "get"**.
+  * `IncludeRules`: (Boolean)
+    * `true`: Use when the user's intent is to **modify** the inventory. Requests the system to grant write permissions and operation protocols.
+    * `false`: Use when only querying the inventory.
+
+**Note:** You currently do not have write permissions. If you need to modify the inventory, you must first send `Action: "get", IncludeRules: true` to obtain system authorization.

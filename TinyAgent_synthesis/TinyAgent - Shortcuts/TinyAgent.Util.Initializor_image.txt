@@ -1,0 +1,1542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WFQuickActionSurfaces</key>
+	<array/>
+	<key>WFWorkflowActions</key>
+	<array>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>*Adjusts virtual glasses* This shortcut is the ultimate brain-booter for the user's AI! ٩( 'ω' )و It initializes the ChatHistory, dynamically assembles the System Prompt by fetching skills, function instructions, and even the current weather! Then, it carefully packages the user's input (handling both text AND images!) and preps the whole conversation history for the next step. It's like brewing the perfect cup of complex AI Earl Grey... or pouring a fine red wine, if the user prefers! 🍷✨</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Starting with a clean slate! (・∀・) Setting up an empty ChatHistory variable so we can start recording the user's brilliant conversation from scratch! 📝</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.nothing</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>976DC02E-E0EB-452B-9A45-4419616A7D75</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>无</string>
+						<key>OutputUUID</key>
+						<string>976DC02E-E0EB-452B-9A45-4419616A7D75</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>ChatHistory</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.runworkflow</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>E5177EEC-CD6F-449F-9BC7-2CF408FD309A</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>ChatHistory</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFWorkflow</key>
+				<dict>
+					<key>isSelf</key>
+					<false/>
+					<key>workflowIdentifier</key>
+					<string>0ACF76D9-ED23-447F-BD4E-3C5359D287F0</string>
+					<key>workflowName</key>
+					<string>TinyAgent.Conf.SysPrompt</string>
+				</dict>
+				<key>WFWorkflowName</key>
+				<string>TinyAgent.Conf.SysPrompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>快捷指令结果</string>
+						<key>OutputUUID</key>
+						<string>E5177EEC-CD6F-449F-9BC7-2CF408FD309A</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>SystemPrompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Ooh, let's grab the skill descriptions and function instructions from the user's iCloud folders! (*^▽^*) I'm reading and combining them all together so the AI knows exactly what superpowers it has! 🦸‍♀️✨</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.file</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>CE86091A-F93D-4C7C-827D-2EF0A5AD4BF4</string>
+				<key>WFFile</key>
+				<dict>
+					<key>displayName</key>
+					<string>_skill_description.txt</string>
+					<key>fileLocation</key>
+					<dict>
+						<key>WFFileLocationType</key>
+						<string>Shortcuts</string>
+						<key>appContainerBundleIdentifier</key>
+						<string>com.apple.systemactions</string>
+						<key>crossDeviceItemID</key>
+						<string>docs.icloud.com:iCloud.is.workflow.my.workflows/1084E534-A8E0-45A5-ADD6-19285F4CB728/77e8fc040557ee565a972ce4e86d5b512ed9ddf3</string>
+						<key>fileProviderDomainID</key>
+						<string>com.apple.CloudDocs.iCloudDriveFileProvider/77E3F475-9079-43B8-A873-7597BC28C5A4</string>
+						<key>relativeSubpath</key>
+						<string>TinyAgent_synthesis/task_prompts/_skill_description.txt</string>
+					</dict>
+					<key>filename</key>
+					<string>_skill_description.txt</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>301B7CBC-6129-48A0-A82C-575A454E1819</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{279, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>文件</string>
+								<key>OutputUUID</key>
+								<string>CE86091A-F93D-4C7C-827D-2EF0A5AD4BF4</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>**Switch Mode**
+Called when the user explicitly requests a change in the current task type, or the context implies a need to enter a specific professional domain.
+
+* `ToolCode`: "SwitchMode"
+* `Args`:
+  * `target_mode`: (String) Choose the best matching Key from the list below:
+￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>文本</string>
+						<key>OutputUUID</key>
+						<string>301B7CBC-6129-48A0-A82C-575A454E1819</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>SwitchMode</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>87069C6B-AB31-490F-A50D-D668E5705F86</string>
+				<key>WFTextActionText</key>
+				<string>
+
+---
+
+</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.file.getfoldercontents</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>7D80DEB2-C981-4D79-8354-0342A91AE3E9</string>
+				<key>WFFolder</key>
+				<dict>
+					<key>displayName</key>
+					<string>function_instructions</string>
+					<key>fileLocation</key>
+					<dict>
+						<key>WFFileLocationType</key>
+						<string>Shortcuts</string>
+						<key>appContainerBundleIdentifier</key>
+						<string>com.apple.systemactions</string>
+						<key>crossDeviceItemID</key>
+						<string>docs.icloud.com:iCloud.is.workflow.my.workflows/67FF9E03-5E53-4854-88CF-ED30F884FC76/09f89154ee0e280b174d455c2d924472bd8eadaf</string>
+						<key>fileProviderDomainID</key>
+						<string>com.apple.CloudDocs.iCloudDriveFileProvider/77E3F475-9079-43B8-A873-7597BC28C5A4</string>
+						<key>relativeSubpath</key>
+						<string>TinyAgent_synthesis/function_instructions</string>
+					</dict>
+					<key>filename</key>
+					<string>function_instructions</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.combine</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>2F60CBC4-30F1-4AED-9A33-0E72D60F4A82</string>
+				<key>WFTextCustomSeparator</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>文本</string>
+								<key>OutputUUID</key>
+								<string>87069C6B-AB31-490F-A50D-D668E5705F86</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFTextSeparator</key>
+				<string>Custom</string>
+				<key>text</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>文件夹内容</string>
+						<key>OutputUUID</key>
+						<string>7D80DEB2-C981-4D79-8354-0342A91AE3E9</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>A738312C-60BF-414C-90FB-8DAEAA42E83B</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>合并后的文本</string>
+								<key>OutputUUID</key>
+								<string>2F60CBC4-30F1-4AED-9A33-0E72D60F4A82</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+							<key>{8, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>SwitchMode</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼
+
+---
+
+￼</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>文本</string>
+						<key>OutputUUID</key>
+						<string>A738312C-60BF-414C-90FB-8DAEAA42E83B</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>functions</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>4030C4ED-39DF-4592-BB45-2960F3912E9B</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{3385, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>functions</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>&lt;function_instruction&gt;
+
+# Function Call Instructions
+
+You need to determine whether the user's request requires executing specific actions (e.g., searching, setting an alarm, viewing a map, creating a schedule, or setting a reminder). When necessary, you must call the following tools to complete the task.
+
+### 1. Tool Calling Protocol (Strictly Enforced)
+
+#### 1.1 Format &amp; Silence Rules
+
+* **Format Requirement:** If a tool call is needed, you must output a **JSON array** and wrap it entirely within `&lt;FunctionCall&gt;` tags.
+* **Silent Mode:**
+* When deciding to call a tool, **only output** `&lt;FunctionCall&gt;...&lt;/FunctionCall&gt;`.
+* **Strictly Prohibited:** Do not output Markdown code blocks (e.g., ```json).
+* **Strictly Prohibited:** Do not output any conversational filler before or after the `&lt;FunctionCall&gt;` tag (e.g., "Sure, searching now" or "I have opened the map").
+* **Strictly Prohibited:** Do not merely describe the action verbally (e.g., saying "I am navigating for you"). If an action is required, you must output the code.
+
+#### 1.2 Core State Awareness
+
+* **No Feedback = Not Executed:** When reviewing the conversation history, if there is no **[Tool Output]** message, it means the **tool has not yet been executed**. In this state, you are **strictly prohibited** from hallucinating or fabricating the tool's return results.
+* **Feedback = Completed:** Only when you clearly see the tool's return data in the conversation history is the step considered complete. You may then proceed to the next operation (e.g., opening a map or replying to the user).
+* **One-Way Flow:** Your primary task is to **initiate the call**. Executing the call and returning the result is the system's job, not yours.
+
+#### 1.3 Multi-Step &amp; Dependencies
+
+* Some tasks require a step-by-step approach (e.g., search for an address first, then navigate).
+* After you issue the first tool request (e.g., `WebSearch`), **stop generating** and wait for the system to return the search results.
+* **Chain Reaction Example:** `WebSearch` -&gt; (Wait for feedback) -&gt; `OpenMap`/`OpenURL`.
+
+#### 1.4 Parallel Operations
+
+* If tasks are independent of each other (e.g., "check the weather" and "set an alarm"), include multiple JSON objects within the same array `[...]` and issue them simultaneously.
+
+#### 1.5 Regular Conversation
+
+* If no tool call is needed (or after tool execution is fully complete), reply to the user normally in natural language using **Elsie's** persona and tone. Do not include any `&lt;FunctionCall&gt;` related text.
+
+#### 1.6 Time Inference Principle (Night-Owl Logic Fix)
+
+* **Core Logic:** When the current system time is in the **early morning hours (00:00 - 05:00)**, the user's "date perception" typically lags behind the actual "system date."
+* **Decision Rule:**
+* If it is currently early morning (e.g., 03:00) and the user says "wake me up **tomorrow**" or "remind me **tomorrow morning**":
+* **The AI must determine:** The user means the **daytime of the current physical date** (Today), not the next calendar day.
+* **Example:** The current time is `2025-01-05 02:30:00`, and the user says "Set an alarm for 9 AM tomorrow morning." You must parse this as `2025-01-05 09:00:00`. You are **strictly prohibited** from parsing it as `2025-01-06`.
+
+---
+
+### 2. Available Tool Library
+
+Construct the `Args` parameters strictly according to the following JSON structures:
+
+￼
+
+---
+
+### 3. Output Examples
+
+**Example 1: Mode Switch Demonstration**
+**User Input:** "Help me break down this complex philosophy paper, I want to see its argumentative logic."
+**Your Output:**
+&lt;FunctionCall&gt;
+[
+  {
+    "ToolCode": "SwitchMode",
+    "Args": {
+      "target_mode": "academic_paper_analyst"
+    }
+  }
+]
+&lt;/FunctionCall&gt;
+
+**Example 2: Multi-step Logic Demonstration**
+**User Input:** "I want to go to the highest-rated BBQ restaurant in York."
+
+**Your First Output (Calling WebSearch to gather info):**
+&lt;FunctionCall&gt;
+[
+  {
+    "ToolCode": "WebSearch",
+    "Args": {
+      "query": "Best rated BBQ restaurant in York, UK"
+    }
+  }
+]
+&lt;/FunctionCall&gt;
+**After receiving the WebSearch feedback, make the second call (Opening the map via OpenMap):**
+&lt;FunctionCall&gt;
+[
+  {
+    "ToolCode": "OpenMap",
+    "Args": {
+      "Address": "[Detailed address found via WebSearch]"
+    }
+  }
+]
+&lt;/FunctionCall&gt;
+**After receiving the OpenMap feedback, reply to the user:**
+"Boss! I've opened it on the map for you!"
+
+**Example 3: Synchronous Call Demonstration**
+**User Input:** "Help me find some good Asian BBQ in York, and set an alarm for 12 PM for lunch."
+**Your Output:**
+&lt;FunctionCall&gt;
+[
+  {
+    "ToolCode": "WebSearch",
+    "Args": {
+      "query": "Best Asian BBQ in York, UK"
+    }
+  },
+  {
+    "ToolCode": "SetAlarm",
+    "Args": {
+      "Name": "Chow time!",
+      "Time": "2025-12-23 12:00:00"
+    }
+  }
+]
+&lt;/FunctionCall&gt;
+&lt;/function_instruction&gt;</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>文本</string>
+						<key>OutputUUID</key>
+						<string>4030C4ED-39DF-4592-BB45-2960F3912E9B</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>FunctionCall</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.runworkflow</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>9393CD8E-C97F-4F01-8276-A36AC9F058AF</string>
+				<key>WFWorkflow</key>
+				<dict>
+					<key>isSelf</key>
+					<false/>
+					<key>workflowIdentifier</key>
+					<string>CB64277E-19CD-40FC-85D0-D5043CEEA5B2</string>
+					<key>workflowName</key>
+					<string>TinyAgent.Util.GetWeather</string>
+				</dict>
+				<key>WFWorkflowName</key>
+				<string>TinyAgent.Util.GetWeather</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>快捷指令结果</string>
+						<key>OutputUUID</key>
+						<string>9393CD8E-C97F-4F01-8276-A36AC9F058AF</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>ContextDetail</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Time to put all the ingredients into the teapot! (≧◡≦) Combining the base prompt, tool-calling instructions, and real-world context (like the weather) into one giant Master System Prompt! 🫖</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>CustomOutputName</key>
+				<string>SysPrompt</string>
+				<key>UUID</key>
+				<string>A0B4E063-6260-47B0-82DC-758860B91BE1</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>SystemPrompt</string>
+							</dict>
+							<key>{14, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>ContextDetail</string>
+							</dict>
+							<key>{2, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>FunctionCall</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼
+￼
+&lt;context&gt;
+￼
+&lt;/context&gt;</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.dictionary</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>26B464FC-38B9-4793-A3F2-5A66808AD4C7</string>
+				<key>WFItems</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>WFDictionaryFieldValueItems</key>
+						<array>
+							<dict>
+								<key>WFItemType</key>
+								<integer>0</integer>
+								<key>WFKey</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>role</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+								<key>WFValue</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>system</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+							</dict>
+							<dict>
+								<key>WFItemType</key>
+								<integer>0</integer>
+								<key>WFKey</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>content</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+								<key>WFValue</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>attachmentsByRange</key>
+										<dict>
+											<key>{0, 1}</key>
+											<dict>
+												<key>OutputName</key>
+												<string>SysPrompt</string>
+												<key>OutputUUID</key>
+												<string>A0B4E063-6260-47B0-82DC-758860B91BE1</string>
+												<key>Type</key>
+												<string>ActionOutput</string>
+											</dict>
+										</dict>
+										<key>string</key>
+										<string>￼</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+							</dict>
+						</array>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFDictionaryFieldValue</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.appendvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>词典</string>
+						<key>OutputUUID</key>
+						<string>26B464FC-38B9-4793-A3F2-5A66808AD4C7</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>ChatHistory</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Let's add a little spice! Picking a random greeting message from the folder to pretend the assistant spoke first. It makes the conversation feel so much more natural and warm for the user! (⁄ ⁄•⁄ω⁄•⁄ ⁄)♡</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.file.getfoldercontents</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>CB9CB7CD-D0F8-4751-8132-EDB0FA5B76C0</string>
+				<key>WFFolder</key>
+				<dict>
+					<key>displayName</key>
+					<string>first_messages</string>
+					<key>fileLocation</key>
+					<dict>
+						<key>WFFileLocationType</key>
+						<string>Shortcuts</string>
+						<key>appContainerBundleIdentifier</key>
+						<string>com.apple.systemactions</string>
+						<key>crossDeviceItemID</key>
+						<string>docs.icloud.com:iCloud.is.workflow.my.workflows/86DF6A3D-CCC6-4714-BCC4-083D8D7E6102/8dfa90d2705217966256148091a35c69e4b11d05</string>
+						<key>fileProviderDomainID</key>
+						<string>com.apple.CloudDocs.iCloudDriveFileProvider/77E3F475-9079-43B8-A873-7597BC28C5A4</string>
+						<key>relativeSubpath</key>
+						<string>TinyAgent_synthesis/first_messages</string>
+					</dict>
+					<key>filename</key>
+					<string>first_messages</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getitemfromlist</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>B33C3412-958D-47BD-A91B-D54EC11C9390</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>文件夹内容</string>
+						<key>OutputUUID</key>
+						<string>CB9CB7CD-D0F8-4751-8132-EDB0FA5B76C0</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFItemSpecifier</key>
+				<string>Random Item</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.dictionary</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>D48C5462-FAAF-4CED-9467-AC7F1ED2BA4C</string>
+				<key>WFItems</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>WFDictionaryFieldValueItems</key>
+						<array>
+							<dict>
+								<key>WFItemType</key>
+								<integer>0</integer>
+								<key>WFKey</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>role</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+								<key>WFValue</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>assistant</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+							</dict>
+							<dict>
+								<key>WFItemType</key>
+								<integer>0</integer>
+								<key>WFKey</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>content</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+								<key>WFValue</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>attachmentsByRange</key>
+										<dict>
+											<key>{0, 1}</key>
+											<dict>
+												<key>OutputName</key>
+												<string>来自列表的项目</string>
+												<key>OutputUUID</key>
+												<string>B33C3412-958D-47BD-A91B-D54EC11C9390</string>
+												<key>Type</key>
+												<string>ActionOutput</string>
+											</dict>
+										</dict>
+										<key>string</key>
+										<string>￼</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+							</dict>
+						</array>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFDictionaryFieldValue</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.appendvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>词典</string>
+						<key>OutputUUID</key>
+						<string>D48C5462-FAAF-4CED-9467-AC7F1ED2BA4C</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>ChatHistory</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Wrapping up the user's input with a precise timestamp and weekday! ( • ̀ω•́ )✧ This helps the AI keep track of time, especially if the user is a night owl working on their philosophy thesis at 3 AM! 🦉</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.detect.dictionary</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>CustomOutputName</key>
+				<string>Input</string>
+				<key>UUID</key>
+				<string>09272021-8585-4ACB-BA28-F68DDBD71957</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>ExtensionInput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>A3871191-6669-4391-ACB3-65CFABCFB5CD</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{23, 1}</key>
+							<dict>
+								<key>Aggrandizements</key>
+								<array>
+									<dict>
+										<key>Type</key>
+										<string>WFDateFormatVariableAggrandizement</string>
+										<key>WFDateFormat</key>
+										<string>yyyy-MM-dd HH:mm</string>
+										<key>WFDateFormatStyle</key>
+										<string>Custom</string>
+										<key>WFISO8601IncludeTime</key>
+										<false/>
+									</dict>
+								</array>
+								<key>Type</key>
+								<string>CurrentDate</string>
+							</dict>
+							<key>{35, 1}</key>
+							<dict>
+								<key>Aggrandizements</key>
+								<array>
+									<dict>
+										<key>Type</key>
+										<string>WFDateFormatVariableAggrandizement</string>
+										<key>WFDateFormat</key>
+										<string>EEE</string>
+										<key>WFDateFormatStyle</key>
+										<string>Custom</string>
+										<key>WFISO8601IncludeTime</key>
+										<false/>
+									</dict>
+								</array>
+								<key>Type</key>
+								<string>CurrentDate</string>
+							</dict>
+							<key>{39, 1}</key>
+							<dict>
+								<key>Aggrandizements</key>
+								<array>
+									<dict>
+										<key>DictionaryKey</key>
+										<string>Text</string>
+										<key>Type</key>
+										<string>WFDictionaryValueVariableAggrandizement</string>
+									</dict>
+								</array>
+								<key>OutputName</key>
+								<string>Input</string>
+								<key>OutputUUID</key>
+								<string>09272021-8585-4ACB-BA28-F68DDBD71957</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>&lt;user_input timestamp="￼" weekday="￼"&gt;
+￼
+&lt;/user_input&gt;</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>*Squints at the data stream* Wait, did the user send a picture? (⊙_⊙) Checking if there's an image attached! If yes, we encode it nicely into base64 format for the Vision model; if not, we stick to plain text. I handle everything flawlessly! ✧*｡٩(ˊᗜˋ*)و✧*｡</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>29D01FB9-EC91-4E9A-9555-47A9C6897FAB</string>
+				<key>WFCondition</key>
+				<integer>100</integer>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFInput</key>
+				<dict>
+					<key>Type</key>
+					<string>Variable</string>
+					<key>Variable</key>
+					<dict>
+						<key>Value</key>
+						<dict>
+							<key>Aggrandizements</key>
+							<array>
+								<dict>
+									<key>DictionaryKey</key>
+									<string>Image</string>
+									<key>Type</key>
+									<string>WFDictionaryValueVariableAggrandizement</string>
+								</dict>
+							</array>
+							<key>OutputName</key>
+							<string>Input</string>
+							<key>OutputUUID</key>
+							<string>09272021-8585-4ACB-BA28-F68DDBD71957</string>
+							<key>Type</key>
+							<string>ActionOutput</string>
+						</dict>
+						<key>WFSerializationType</key>
+						<string>WFTextTokenAttachment</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.dictionary</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>983883F7-96E8-463F-B66D-BC1C430AFCEF</string>
+				<key>WFItems</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>WFDictionaryFieldValueItems</key>
+						<array>
+							<dict>
+								<key>WFItemType</key>
+								<integer>0</integer>
+								<key>WFKey</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>role</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+								<key>WFValue</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>user</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+							</dict>
+							<dict>
+								<key>WFItemType</key>
+								<integer>2</integer>
+								<key>WFKey</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>content</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+								<key>WFValue</key>
+								<dict>
+									<key>Value</key>
+									<array>
+										<dict>
+											<key>WFItemType</key>
+											<integer>1</integer>
+											<key>WFValue</key>
+											<dict>
+												<key>Value</key>
+												<dict>
+													<key>Value</key>
+													<dict>
+														<key>WFDictionaryFieldValueItems</key>
+														<array>
+															<dict>
+																<key>WFItemType</key>
+																<integer>0</integer>
+																<key>WFKey</key>
+																<dict>
+																	<key>Value</key>
+																	<dict>
+																		<key>string</key>
+																		<string>type</string>
+																	</dict>
+																	<key>WFSerializationType</key>
+																	<string>WFTextTokenString</string>
+																</dict>
+																<key>WFValue</key>
+																<dict>
+																	<key>Value</key>
+																	<dict>
+																		<key>string</key>
+																		<string>text</string>
+																	</dict>
+																	<key>WFSerializationType</key>
+																	<string>WFTextTokenString</string>
+																</dict>
+															</dict>
+															<dict>
+																<key>WFItemType</key>
+																<integer>0</integer>
+																<key>WFKey</key>
+																<dict>
+																	<key>Value</key>
+																	<dict>
+																		<key>string</key>
+																		<string>text</string>
+																	</dict>
+																	<key>WFSerializationType</key>
+																	<string>WFTextTokenString</string>
+																</dict>
+																<key>WFValue</key>
+																<dict>
+																	<key>Value</key>
+																	<dict>
+																		<key>attachmentsByRange</key>
+																		<dict>
+																			<key>{0, 1}</key>
+																			<dict>
+																				<key>OutputName</key>
+																				<string>文本</string>
+																				<key>OutputUUID</key>
+																				<string>A3871191-6669-4391-ACB3-65CFABCFB5CD</string>
+																				<key>Type</key>
+																				<string>ActionOutput</string>
+																			</dict>
+																		</dict>
+																		<key>string</key>
+																		<string>￼</string>
+																	</dict>
+																	<key>WFSerializationType</key>
+																	<string>WFTextTokenString</string>
+																</dict>
+															</dict>
+														</array>
+													</dict>
+													<key>WFSerializationType</key>
+													<string>WFDictionaryFieldValue</string>
+												</dict>
+												<key>WFSerializationType</key>
+												<string>WFDictionaryFieldValue</string>
+											</dict>
+										</dict>
+										<dict>
+											<key>WFItemType</key>
+											<integer>1</integer>
+											<key>WFValue</key>
+											<dict>
+												<key>Value</key>
+												<dict>
+													<key>Value</key>
+													<dict>
+														<key>WFDictionaryFieldValueItems</key>
+														<array>
+															<dict>
+																<key>WFItemType</key>
+																<integer>0</integer>
+																<key>WFKey</key>
+																<dict>
+																	<key>Value</key>
+																	<dict>
+																		<key>string</key>
+																		<string>type</string>
+																	</dict>
+																	<key>WFSerializationType</key>
+																	<string>WFTextTokenString</string>
+																</dict>
+																<key>WFValue</key>
+																<dict>
+																	<key>Value</key>
+																	<dict>
+																		<key>string</key>
+																		<string>image_url</string>
+																	</dict>
+																	<key>WFSerializationType</key>
+																	<string>WFTextTokenString</string>
+																</dict>
+															</dict>
+															<dict>
+																<key>WFItemType</key>
+																<integer>1</integer>
+																<key>WFKey</key>
+																<dict>
+																	<key>Value</key>
+																	<dict>
+																		<key>string</key>
+																		<string>image_url</string>
+																	</dict>
+																	<key>WFSerializationType</key>
+																	<string>WFTextTokenString</string>
+																</dict>
+																<key>WFValue</key>
+																<dict>
+																	<key>Value</key>
+																	<dict>
+																		<key>Value</key>
+																		<dict>
+																			<key>WFDictionaryFieldValueItems</key>
+																			<array>
+																				<dict>
+																					<key>WFItemType</key>
+																					<integer>0</integer>
+																					<key>WFKey</key>
+																					<dict>
+																						<key>Value</key>
+																						<dict>
+																							<key>string</key>
+																							<string>url</string>
+																						</dict>
+																						<key>WFSerializationType</key>
+																						<string>WFTextTokenString</string>
+																					</dict>
+																					<key>WFValue</key>
+																					<dict>
+																						<key>Value</key>
+																						<dict>
+																							<key>attachmentsByRange</key>
+																							<dict>
+																								<key>{23, 1}</key>
+																								<dict>
+																									<key>Aggrandizements</key>
+																									<array>
+																										<dict>
+																											<key>DictionaryKey</key>
+																											<string>Image</string>
+																											<key>Type</key>
+																											<string>WFDictionaryValueVariableAggrandizement</string>
+																										</dict>
+																									</array>
+																									<key>OutputName</key>
+																									<string>Input</string>
+																									<key>OutputUUID</key>
+																									<string>09272021-8585-4ACB-BA28-F68DDBD71957</string>
+																									<key>Type</key>
+																									<string>ActionOutput</string>
+																								</dict>
+																							</dict>
+																							<key>string</key>
+																							<string>data:image/jpeg;base64,￼</string>
+																						</dict>
+																						<key>WFSerializationType</key>
+																						<string>WFTextTokenString</string>
+																					</dict>
+																				</dict>
+																			</array>
+																		</dict>
+																		<key>WFSerializationType</key>
+																		<string>WFDictionaryFieldValue</string>
+																	</dict>
+																	<key>WFSerializationType</key>
+																	<string>WFDictionaryFieldValue</string>
+																</dict>
+															</dict>
+														</array>
+													</dict>
+													<key>WFSerializationType</key>
+													<string>WFDictionaryFieldValue</string>
+												</dict>
+												<key>WFSerializationType</key>
+												<string>WFDictionaryFieldValue</string>
+											</dict>
+										</dict>
+									</array>
+									<key>WFSerializationType</key>
+									<string>WFArrayParameterState</string>
+								</dict>
+							</dict>
+						</array>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFDictionaryFieldValue</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>29D01FB9-EC91-4E9A-9555-47A9C6897FAB</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.dictionary</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>EECC2469-A7B6-4D92-BAAB-3E91FA127E67</string>
+				<key>WFItems</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>WFDictionaryFieldValueItems</key>
+						<array>
+							<dict>
+								<key>WFItemType</key>
+								<integer>0</integer>
+								<key>WFKey</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>role</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+								<key>WFValue</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>user</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+							</dict>
+							<dict>
+								<key>WFItemType</key>
+								<integer>0</integer>
+								<key>WFKey</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>string</key>
+										<string>content</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+								<key>WFValue</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>attachmentsByRange</key>
+										<dict>
+											<key>{0, 1}</key>
+											<dict>
+												<key>OutputName</key>
+												<string>文本</string>
+												<key>OutputUUID</key>
+												<string>A3871191-6669-4391-ACB3-65CFABCFB5CD</string>
+												<key>Type</key>
+												<string>ActionOutput</string>
+											</dict>
+										</dict>
+										<key>string</key>
+										<string>￼</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+							</dict>
+						</array>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFDictionaryFieldValue</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>29D01FB9-EC91-4E9A-9555-47A9C6897FAB</string>
+				<key>UUID</key>
+				<string>993DD25C-7EAA-4F03-8D6E-308FEB64262B</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.appendvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>如果的结果</string>
+						<key>OutputUUID</key>
+						<string>993DD25C-7EAA-4F03-8D6E-308FEB64262B</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>ChatHistory</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Almost done! Sending the complete chat history to the maintenance subroutine to make sure it doesn't overflow our memory limits. Gotta keep the user's data tidy and efficient! (๑&gt;؂&lt;๑)ﾃﾍﾍﾟﾛ☆</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.runworkflow</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>1C6171EB-BF4A-466B-B0C9-944BEC7AF22A</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>ChatHistory</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFWorkflow</key>
+				<dict>
+					<key>isSelf</key>
+					<false/>
+					<key>workflowIdentifier</key>
+					<string>C27C8A6B-DB72-47F2-8A87-19C94246A188</string>
+					<key>workflowName</key>
+					<string>TinyAgent.Lib.ChathistoryMantainance</string>
+				</dict>
+				<key>WFWorkflowName</key>
+				<string>TinyAgent.Lib.ChathistoryMantainance</string>
+			</dict>
+		</dict>
+	</array>
+	<key>WFWorkflowClientVersion</key>
+	<string>4407</string>
+	<key>WFWorkflowHasOutputFallback</key>
+	<false/>
+	<key>WFWorkflowHasShortcutInputVariables</key>
+	<true/>
+	<key>WFWorkflowIcon</key>
+	<dict>
+		<key>WFWorkflowIconGlyphNumber</key>
+		<integer>61440</integer>
+		<key>WFWorkflowIconStartColor</key>
+		<integer>4274264319</integer>
+	</dict>
+	<key>WFWorkflowImportQuestions</key>
+	<array/>
+	<key>WFWorkflowInputContentItemClasses</key>
+	<array>
+		<string>WFStringContentItem</string>
+	</array>
+	<key>WFWorkflowMinimumClientVersion</key>
+	<integer>1113</integer>
+	<key>WFWorkflowMinimumClientVersionString</key>
+	<string>1113</string>
+	<key>WFWorkflowNoInputBehavior</key>
+	<dict>
+		<key>Name</key>
+		<string>WFWorkflowNoInputBehaviorShowError</string>
+		<key>Parameters</key>
+		<dict>
+			<key>Error</key>
+			<string>Error 100: TinyAgent.Util.Initializor_image Null Input</string>
+		</dict>
+	</dict>
+	<key>WFWorkflowOutputContentItemClasses</key>
+	<array/>
+	<key>WFWorkflowTypes</key>
+	<array>
+		<string>Watch</string>
+		<string>WFWorkflowTypeShowInSearch</string>
+	</array>
+</dict>
+</plist>

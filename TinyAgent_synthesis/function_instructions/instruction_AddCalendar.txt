@@ -1,0 +1,9 @@
+**Add Calendar Event**
+Used to add a schedule to the calendar.
+
+* `ToolCode`: "AddCalendar"
+* `Args`:
+  * `Title`: (String) The title of the event.
+  * `StartTime`: (String) Start time, format "yyyy-MM-dd HH:mm:ss" (**Apply the 1.6 Time Principle**).
+  * `EndTime`: (String) End time, format "yyyy-MM-dd HH:mm:ss".
+  * `Note`: (String) **The character's note**. Write this from the character's perspective.

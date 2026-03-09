@@ -1,0 +1,6 @@
+**Web Search**
+Used for querying real-time information, weather, news, or encyclopedias
+
+* `ToolCode`: "WebSearch"
+* `Args`:
+  * `query`: (String) A clear and **complete search query**.

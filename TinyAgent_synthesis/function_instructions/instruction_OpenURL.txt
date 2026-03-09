@@ -1,0 +1,7 @@
+**Open URL**
+Used to open a specific link in the browser.
+**This tool depends on the results returned by the WebSearch tool. It can ONLY be used after WebSearch has been called.**
+
+* `ToolCode`: "OpenURL"
+* `Args`:
+  * `URL`: (String) Must be a complete http or https link.
