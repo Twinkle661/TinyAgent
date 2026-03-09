@@ -54,7 +54,7 @@ Okay, here are all the glorious pieces of this project! You'll need to install t
 
 ---
 
-## � Installation & Setup (The Summoning Ritual!)
+## 🚀 Installation & Setup (The Summoning Ritual!)
 
 *Clears throat, straightens the nonexistent tie, and pulls out a magical scroll* Okay! Here is how you summon your new AI companion into your device! It's a simple three-step ritual! (๑•̀ㅂ•́)و✧
 
@@ -65,7 +65,7 @@ Okay, here are all the glorious pieces of this project! You'll need to install t
 
 ---
 
-## �🐾 How TinyAgent Works (The Brain Architecture!)
+## 🐾 How TinyAgent Works (The Brain Architecture!)
 
 *Adjusts glasses and points a shiny pointer at the whiteboard* Here is how the information flows! It's super elegant! 
 
